@@ -10,7 +10,7 @@ file_data.pop(0)
 def Mean():
     new_data = []
     for i in range(len(file_data)) : 
-        n_num = file_data[i][1]
+        n_num = file_data[i][2]
         new_data.append(float(n_num))
 
     n = len(new_data)
@@ -19,12 +19,12 @@ def Mean():
         total += i
 
     mean = total/n
-    print("Average: " + str(mean))
+    print("Mean : " + str(mean))
 
 def Median():
     new_data = []
     for i in range(len(file_data)) : 
-        n_num = file_data[i][1]
+        n_num = file_data[i][2]
         new_data.append(float(n_num))
 
     n = len(new_data)
@@ -37,12 +37,12 @@ def Median():
     else :
         median = new_data[n//2]
 
-    print("Median is: " + str(median))
+    print("Median : " + str(median))
 
 def Mode():
     new_data = []
     for i in range(len(file_data)) : 
-        n_num = file_data[i][1]
+        n_num = file_data[i][2]
         new_data.append(float(n_num))
 
     data = Counter(new_data)
@@ -65,7 +65,7 @@ def Mode():
         if occurence > mode_occurence:
             mode_range, mode_occurence = [int(Range.split("-")[0]), int(Range.split("-")[1])], occurence
     mode = float((mode_range[0] + mode_range[1]) / 2)
-    print(f"Mode is: {mode:2f}")
+    print(f"Mode : {mode:2f}")
 
 def main():
     Mean()
